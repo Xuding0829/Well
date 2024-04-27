@@ -1,0 +1,8 @@
+train: ../images/train  # 128 images
+val: ../images/val  # 128 images
+ 
+# number of classes
+nc: 5
+
+# class names
+names: [ 'good', 'broke', 'lose', 'uncovered', 'circle']
