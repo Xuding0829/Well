@@ -1,0 +1,50 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+
+name: Greetings
+
+on:
+  pull_request_target:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: |
+            诶？我竟然还能收到PR？
+            👋 你好 @${{ github.actor }}, 非常感谢提交 🚀 PR!
+            本repo是fork自原版yolov5工程，代码方面的PR请提交至官方仓库地址，README的相关PR我会审查无误后merge
+          issue-message: |
+            👋 你好 @${{ github.actor }}, 如有任何问题，请首先检查你的运行指令有没有问题，如果指令没有问题，请尝试更新作者仓库的最新代码：
+            ```bash
+              # 如果没下载官方代码
+              $ git clone https://github.com/ultralytics/yolov5.git
+              $ cd yolov5
+              $ pip install -r requirements.txt
+            ```
+            ```bash
+              # 如果已下载官方代码
+              $ cd yolov5
+              $ git reset --hard
+              $ git pull
+              $ pip install -r requirements.txt
+            ```
+            更多请参考⭐️[英文官方教程](https://github.com/ultralytics/yolov5/wiki#tutorials)
+
+            ## 依赖
+
+            Python版本3.6或更高，python依赖库都在[requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) 里面，直接`pip install -r requirements.txt`即可。
+            如果你使用Windows的话，尽量使用CUDA10.2和对应版本的pytorch，CUDA11+会有些许问题。
+
+            ## 环境
+            下面是已经配置好环境的免费GPU训练环境：
+            - **Google Colab and Kaggle** : <a href="https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a> <a href="https://www.kaggle.com/ultralytics/yolov5"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open In Kaggle"></a>
+            - **Google Cloud** : [GCP 快速上手教程](https://github.com/ultralytics/yolov5/wiki/GCP-Quickstart)
+            - **Amazon** Deep Learning AMI. See [AWS 快速上手教程](https://github.com/ultralytics/yolov5/wiki/AWS-Quickstart)
+            - **Docker Image**. [Docker 快速上手教程](https://github.com/ultralytics/yolov5/wiki/Docker-Quickstart) <a href="https://hub.docker.com/r/ultralytics/yolov5"><img src="https://img.shields.io/docker/pulls/ultralytics/yolov5?logo=docker" alt="Docker Pulls"></a>
+
