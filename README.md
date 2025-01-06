@@ -2330,3 +2330,7 @@ python train.py --weights last.pt路径
 + last.pt：保存的是最后一次训练迭代结束后的模型权重。这个文件通常用于继续训练模型，因为它包含了最后一次训练迭代结束时的模型权重，可以继续从上一次训练结束的地方继续训练模型。
 + 使用上的区别是，当需要在之前的训练基础上继续训练时，应该使用last.pt作为起点进行训练；当需要使用训练后的模型进行推理和部署时，应该使用best.pt。
 
+
+Star Histroy
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Xuding0829/Well&type=Date)](https://star-history.com/#Xuding0829/Well&Date)
