@@ -1059,9 +1059,9 @@ mAp值：所有类别的Ap值的平均数。
 
 
 
-**该次训练的pr曲线呈现以及右上角的每一类的ap值和所有类别的map值：**![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724207193766-ef1e06df-81a1-4298-8079-d85fa4625949.png)训练结束后会在根目录下生成一个run文件夹，里面存放训练结果和权重  
+**该次训练的pr曲线呈现以及右上角的每一类的ap值和所有类别的map值：**![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103225303-2741dda7-a36e-48dc-9792-3823ee6f8ee3.png)训练结束后会在根目录下生成一个run文件夹，里面存放训练结果和权重  
 
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724208494065-64e0ec29-1bf4-49be-ae98-0c8b7b71da32.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103237725-b9ab5077-d1c0-47df-b044-1bfa9a9aac3e.png)
 
 结果输出
 
@@ -1121,19 +1121,11 @@ print("预测结果已保存到", output_txt)
 
 用目前数据集跑出来的模型对图片目标检测的成果展示
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fdirect%2Fe457a176c8c046c1a34a6e2028c56b95.png&sign=cbd1bef6d2e4020c206989b3de64dfbfdff89803c8c11590baf696d6c1199fe8)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103268509-9498c2b3-6ce8-4899-ba3c-a0edfac9aaba.png)
 
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103279218-4dc69a7e-c9af-4eeb-9129-d33b0f9d4e83.png)
 
-
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724207250329-3d7c0e76-0041-4d9a-aaaf-ca625904b603.png)
-
-
-
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724207250490-203f76a9-c379-4286-b639-8d1999c2f4ac.png)
-
-
-
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724207250419-9b557d91-a445-41d8-8386-df089d5e1b55.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103285893-4be4b88c-c963-4b43-8563-cc516251f5af.png)
 
 # 可视化界面
 
@@ -1987,15 +1979,15 @@ names:
 
 epoch:100 batchsize:16 lr:0.0001 pretrain:YOLOv8n:
 
-![](https://www.yuque.com/api/filetransfer/images?url=https%3A%2F%2Fimg-blog.csdnimg.cn%2Fdirect%2F575242a1dd244d9c8a1cc8a72d98d4f8.png&sign=9257a4f0374d1d1436efbd69c65c1f3f269b38f2eca3f0bdd673c6a909e4d383)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103329332-bf139012-754e-48a8-9846-456f117224cf.png)
 
 **epoch:100 batchsize:32 lr:0.001 pretrain:train1(上一次的训练模型):**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724225926527-7965cb15-a83f-425d-8efc-10f2d2c50333.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103356201-17c03778-7b68-4831-9448-bda6fdc1febc.png)
 
 **epoch:50 batchsize:16 lr:0.0001 pretrain:train2(上一次的训练模型):**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724225926460-37b3abc5-870b-4cd2-9014-fdf8be893963.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103365711-e3a5d0e5-a770-4666-ba19-17f1a2560aa7.png)
 
 其中还尝试调整了imgsz、数据增强等操作，效果都没太大变化就不展示了，感觉变化不大
 
@@ -2011,7 +2003,7 @@ epoch:100 batchsize:16 lr:0.0001 pretrain:YOLOv8n:
 
 在ultralytics/utils文件中打开，loss.py和tal.py这两个文件
 
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724226003994-5d962051-c4a8-466d-81a3-954d23a87093.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103377871-84cf667c-7037-4a94-b18e-247acd03625c.png)
 
 在loss.py文件中找到 class BboxLoss(nn.Module)函数，再找到bbox_iou,按住Ctrl键后进入
 
@@ -2319,7 +2311,7 @@ start_epoch = ckpt['epoch'] # +1去掉
 python train.py --weights last.pt路径
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/32775942/1724209721994-15da8cc1-61c4-4556-af97-93738ec3c356.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/32775942/1747103406767-ae4edc2b-a504-45b1-b33c-b0d114287734.png)
 
 # 其他的一些知识点
 
@@ -2331,6 +2323,8 @@ python train.py --weights last.pt路径
 + 使用上的区别是，当需要在之前的训练基础上继续训练时，应该使用last.pt作为起点进行训练；当需要使用训练后的模型进行推理和部署时，应该使用best.pt。
 
 
-Star Histroy
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Xuding0829/Well&type=Date)](https://star-history.com/#Xuding0829/Well&Date)
+# Star Histroy
+
+![](https://api.star-history.com/svg?repos=Xuding0829/Well&type=Date)
+
